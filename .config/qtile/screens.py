@@ -1,6 +1,8 @@
 from libqtile import widget, bar
 from libqtile.config import Screen
 
+wallpaper = "~/Pictures/Wallpapers/EndeavourOS/krimkerre_2_poly.jpg"
+
 main_bar = bar.Bar(
     [
         widget.CurrentLayout(),
@@ -24,15 +26,17 @@ main_bar = bar.Bar(
     ],
     24,
     # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-    # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+    # border_color=["#ff00ff", "#000000", "#ff00ff", "#000000"]  # Borders are magenta
 )
 
 screens = [
     Screen(
         top=main_bar,
+        wallpaper=wallpaper,
+        wallpaper_mode='fill'
     ),
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
                 widget.CurrentLayout(),
                 widget.GroupBox(),
@@ -55,7 +59,9 @@ screens = [
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            # border_color=["#ff00ff", "#000000", "#ff00ff", "#000000"]  # Borders are magenta
         ),
+        wallpaper=wallpaper,
+        wallpaper_mode='fill'
     ),
 ]
