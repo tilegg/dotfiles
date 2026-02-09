@@ -18,10 +18,16 @@ require("lazy").setup({
     -- Enable DAP
     { import = "lazyvim.plugins.extras.dap.core" },
 
+    -- Enable surround
+    { import = "lazyvim.plugins.extras.coding.mini-surround" },
+
     -- Import languages used
-    { import = "lazyvim.plugins.extras.lang.python-semshi" },
+    -- { import = "lazyvim.plugins.extras.lang.python-semshi" },
     { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.lang.vue" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
+    -- { import = "lazyvim.plugins.extras.lang.ansible" },  # Disabled as ansible-lint crashes when deleting a line (dd) with (red?) findings
+    { import = "lazyvim.plugins.extras.lang.rust" },
 
     -- import/override with your plugins
     { import = "plugins" },

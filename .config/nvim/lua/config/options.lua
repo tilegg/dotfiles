@@ -5,10 +5,12 @@
 -- Disable autoformat
 vim.g.autoformat = false
 
+-- Set system python (needed for venvs to work properly)
+vim.g.python3_host_prog = '/usr/bin/python3'
 local opt = vim.opt
 
 -- Disable mouse mode
--- opt.mouse = ""
+opt.mouse = ""
 
 -- Disable clipboard
 opt.clipboard = ""
