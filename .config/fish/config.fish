@@ -1,10 +1,11 @@
 if status is-login
-    if not set -q $WAYLAND_DISPLAY; and test $XDG_VTNR -eq 1
-        echo "Starting hyprland"
-        Hyprland
-    else
-        # echo "Not starting hyprland"
-    end
+    # Hyprland startup script (requires autologin)
+    # if not set -q $WAYLAND_DISPLAY; and test $XDG_VTNR -eq 1
+    #     echo "Starting hyprland"
+    #     Hyprland
+    # else
+    #     # echo "Not starting hyprland"
+    # end
 else if status is-interactive
     # Commands to run in interactive sessions can go here
     /usr/bin/neofetch
@@ -25,3 +26,4 @@ end
 #status --is-login; and status --is-interactive; and exec byobu-launcher
 
 fish_add_path ~/.local/bin
+if not set -q VSCODE_CWD;   status --is-login; and status --is-interactive; and exec byobu-launcher;end
